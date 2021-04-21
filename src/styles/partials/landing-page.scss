@@ -1,0 +1,306 @@
+.landing-page {
+
+    .red {
+        background-color: $color-griffindor;
+    }
+    .green {
+        background-color: $color-slytherin;
+    }
+    .blue {
+        background-color: $color-ravenclaw;
+    }
+    .yellow {
+        background-color: $color-hufflepuff;
+    }
+
+
+    .strip { 
+        &.small {
+            width: 12px;
+        }
+        &.medium {
+            width: 24px;
+        }
+        &.big {
+            width: 50px;
+        }
+    }
+
+
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .hero-picture {
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+            background-size: cover;
+            background-position: center;
+            h1 {
+                float: right;
+                color: white;
+                margin: 32px;
+                font-weight: 500;
+                font-size: 40px;
+            }
+        }
+        .hero-description {
+            width: 525px;
+            height: 100%;
+            h4 {
+                color: white;
+                font-weight: 500;
+                font-size: 23px;
+                width: 100%;
+                text-align: right;
+                margin: 15px 0px 15px 0px;
+                padding-right: 20px;
+            }
+            p {
+                color: white;
+                font-size: 15px;
+                font-weight: 300;
+                text-align: right;
+                line-height: 33px;
+                max-width: 299px;
+                float: right;
+                margin-bottom: 25px;
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            button {
+                float: right;
+                margin-right: 20px;
+                margin-bottom: 25px;
+                color: white;
+                background-color: transparent;
+                border: 1px solid white;
+                padding: 10px 23px;
+                font-size: 14px;
+                cursor: pointer;
+                &:active {
+                    padding: 8px 20px;
+                    margin-bottom: 29px;
+                }
+            }
+        }
+    }
+
+    .text-container {
+        margin: 30px 122px;
+        h4 {
+            color: $color-griffindor;
+            font-size: 26px;
+            margin-bottom: 31px;
+        }
+        p {
+            line-height: 28px;
+            text-align: right;
+        }
+        p.left {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+    }
+
+    .hero-article-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .hero-picture {
+            background-image: url(https://s3-alpha-sig.figma.com/img/ee06/18ee/94d5e6c54b5a19158eea94e75d9a48d8?Expires=1620000000&Signature=DvIBWDzPPV-QiI57FMBMCnvAr~73~BAqX7E5KWjQP720RArms3hHqA8ukg8lW3Js284W~wYTDkxg-8sdT13qSltdI7kVp7I0DgvKcY0q58EZL1znsQheyNQ2hZyUdTbsWETW-0oGn~lechl4yVLShMN0eodiZttKpxIg7-ooM-Q4r1Eyea3gB-xAPyhaqlki7U7SKnFbCwd8mD6no2ZyBy-FyzulEGhDfohtAcVC~1TNP0AMHz4aVACv0vHDH6PEXQkW5cDpbYzk4d-gm6G~SiYFz-~LD847DOgZuKvF7-Dc9BC0UKSjuLOEAhWGXNmMWwtQ8qPi1cBxPqG69~MOrw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+            background-position: center;
+            background-size: cover;
+            width: 571px;
+        }
+        .hero-description {
+            width: 100%;
+            padding-bottom: 30px;
+            h5 {
+                color: white;
+                font-size: 22px;
+                font-weight: 300;
+                margin: 37px;
+            }
+            p {
+                color: white;
+                font-weight: 300;
+                margin: 18px 37px 19px 37px;
+                font-size: 14px;
+                line-height: 24px;
+            }       
+            .more-text {
+                transition: max-height 0.5s;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                margin: 10px 37px 0;
+            }
+            label {
+                color: $color-hufflepuff;
+                margin-left: 37px;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                }
+            }     
+            input {
+                display: none;
+                &:checked + .more-text {
+                    transition: max-height 0.5s;
+                    opacity: 1;
+                    max-height: 500px;
+                }
+            }
+        }
+
+    }
+
+    article {
+        margin: 50px  0;
+    }
+
+    .video-article-content {
+        display: flex;
+        justify-content: center;
+        .video-content {
+            width: 100%;
+            background-color: $color-ravenclaw;
+            display: flex;
+            .video {
+                padding: 45px 45px 45px 22px;
+                // max-width: 350px;
+                iframe {
+                    width: 400px; 
+                    height: 225px;
+                }
+            }
+            .video-description {
+                align-self: center;
+                text-align: right;
+                p {
+                   color: white; 
+                   padding: 20px;
+                }
+                
+            }
+        }
+    }
+
+    footer {
+        .arrow {
+            width: 100%;
+            height: 15px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5px;
+            
+        }
+        nav ul {
+            list-style: none;
+            li {
+                display: inline;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                    margin-right: 15px;
+                }
+            }
+        }
+        .copyright {
+            color: white;
+            font-size: 14px;
+        }
+    }
+
+
+        
+    @media only screen and (min-width: $bp-l) {
+        .header-container .hero-description {
+            p {
+                max-width: 266px;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: $bp-l) {
+        .video-article-content {
+            iframe {
+                width: 337px !important;
+                height: 208px !important;
+            }
+        }
+    }
+
+
+
+
+    @media only screen and (max-width: $bp-xs) {
+        .header-container {
+            .strip {
+                display: none;
+            }
+        }
+        .text-container {
+            margin: 30px 25px;
+        }
+        .hero-article-content {
+            flex-direction: column;
+            .hero-picture {
+                width: 100%;
+                height: 325px;
+            }
+        }
+
+
+        .video-article-content {
+            flex-direction: column;
+            .video-description {
+                padding: 20px;
+            }
+            .video {
+                padding: 20px !important;
+            }
+            .video-content {
+                flex-direction: column;
+            }
+            iframe {
+                width: 100% !important;
+                height: 300px !important;
+            }
+        }
+       
+    }
+
+    @media only screen and (max-width: $bp-xxs) {
+        .header-container {
+            flex-direction: column;
+            .hero-description {
+                width: 100%;
+                p {
+                    max-width: auto;
+                    width: 100%;
+                }                
+            }
+
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-direction: column;
+
+            nav {
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+
+}

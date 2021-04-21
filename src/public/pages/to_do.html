@@ -8,8 +8,24 @@
 </head>
 <body class="to-do-page">
     
-    <div class="container">
+    <div class="container to-do-container">
         <h1>To do app</h1>
+        <div class="btn-panel">
+
+            <input type="checkbox" id="btn_filter_done">
+            <label for="btn_filter_done">Filter done</label>
+            
+            <input type="checkbox" id="btn_filter_undone">
+            <label for="btn_filter_undone">Filter undone</label>
+
+            <button id="btn_clear_all">Clear all</button>
+            <button id="btn_clear_done">Clear done</button>
+        </div>
+        <ul id="task_list"></ul>
+        <div class="bottom-panel">
+            <input id="text_create" type="text" autofocus>
+            <button id="create">Create task</button>
+        </div>
     </div>
 
 </body>

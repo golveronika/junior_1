@@ -1,0 +1,137 @@
+.form-page {
+    width: 100%;
+    height: 100%;
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: #00000063;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            .modal-header {
+                align-self: flex-end;
+                .close {
+                    background-image: url(https://icons-for-free.com/iconfiles/png/512/CLOSE-131994911256789607.png);
+                    width: 30px;
+                    height: 30px;
+                    background-position: center;
+                    background-size: cover;
+                    background-color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+            .modal-title {
+                margin: 5px 50px;
+                span {
+                    font-size: 28px;
+                }
+            }
+            .modal-texarea {
+                margin: 20px 0;
+                textarea {
+                    width: 400px;
+                    height: 110px;
+                    resize: none;
+                    padding: 4px;
+                    outline-color: $color-btn;
+                }
+            }
+            .ok-btn {
+                border: none;
+                cursor: pointer;
+                padding: 5px 20px;
+                background-color: $color-btn;
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+    .form-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+            margin: 15px;
+            font-weight: 400;
+        }
+        form {
+            padding: 10px;
+            .form-row {
+                width: 100%;
+                padding: 10px;
+                select {
+                    padding: 5px;
+                    option.placeholder {
+                        display: none;
+                    }
+                }
+                .alert {
+                    padding: 10px;
+                    background-color: red;
+                    opacity: 0.6;
+                    width: 100%;
+                    margin-top: 5px;
+                    animation: fadeIn 2s;
+                    span {
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-weight: 300;
+                        color: white;
+                    }
+                }
+                label:not(.desc) {
+                    width: 100px;
+                    display: inline-block;
+                    text-align: end;
+                    margin-right: 10px;
+                    font-size: 18px;
+                    &.textarea {
+                        float: left;
+                        padding: 5px;
+
+                    }
+                }
+                textarea{
+                    resize: none;
+                    padding: 4px;
+                    outline-color: $color-btn;
+                }
+                input {
+                    padding: 4px;
+                    outline-color: $color-btn;
+                }
+                input[type=submit] {
+                    margin-left: 113px;
+                    padding: 10px 15px;
+                    font-size: 18px;
+                    background-color: $color-btn;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                input[type=radio] {
+                    margin-right: 5px;
+                    & + label {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn { 
+    0%   { opacity:0; }
+    100% { opacity:0.6; }
+  }

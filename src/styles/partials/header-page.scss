@@ -1,0 +1,111 @@
+.header-page {
+    height: 100%;
+    .container-content {
+        background-color: #F2EDED; 
+        height: calc(100% - 60px); 
+      }
+    header {
+        background-color: #636363;
+        height: 60px;
+        .container-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;  
+            width: 100%;    
+            
+            nav ul {
+                list-style: none;
+                li {
+                    display: inline;
+                    margin-left: 10px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        position: relative;
+                        &:hover::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            background-color: white;
+                            bottom: -1px;
+                        }
+                    }
+                }
+            } 
+            .burger {
+                display: none;
+                cursor: pointer;
+                transition: opacity .2s ease-in;
+                padding-top: 7px;
+                height: 100%;
+                &:hover {
+                    opacity: 0.6;
+                }
+                div {
+                    width: 35px;
+                    height: 3px;
+                    background-color: white;
+                    margin: 9px 0;
+                }
+            }     
+        }
+        .title {
+            color: white;
+        }
+    }
+
+    @media only screen and (max-width: $bp-l) {
+        .container-header {
+            padding: 0 15px;
+        }
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+        .container-header {
+            .burger {
+                display: block !important;
+                
+                &:hover + nav{
+                    height: 195px;
+                    overflow: hidden;
+                    padding: 14px 0;
+                    transition: height .1s ease-in;
+                }
+            }
+            nav {
+                position: absolute;
+                top: 60px;
+                background-color: black;
+                width: 100%;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 999;
+                transition: height .1s ease-in;
+                height: 0px;
+                overflow: hidden;
+                padding: 0;
+                
+                &:hover {
+                    height: 195px;
+                    overflow: hidden;
+                    padding: 14px 0;
+                }
+
+                ul li {
+                    display: block !important;
+                    margin-left: 10px;
+                    padding-bottom: 10px;
+                    a {
+                        font-size: 17px !important;
+                    }
+                }
+            }
+        }
+}
+
+}

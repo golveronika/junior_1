@@ -1,0 +1,47 @@
+.main-page {
+
+    h1 {
+        font-weight: 500;
+        text-align: center;
+        background: linear-gradient(to right, $color-griffindor 13%, $color-slytherin 37%, $color-hufflepuff 62%, $color-ravenclaw 87%, $color-griffindor 100%);
+        background-size: 200% auto;
+        color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+        animation: shine 20s linear infinite;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            background: none;
+            color: $color-text;
+        }
+    }
+    h1, nav {
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin-top: 5px;
+            a {
+                text-decoration: none;
+                transition: color .2s ease-in;
+                &:hover {
+                    color: $color-btn;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
